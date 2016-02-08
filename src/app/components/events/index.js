@@ -334,7 +334,7 @@ const PageEventHub = React.createClass({
     });
   },
   generateStudioUri(studio) {
-    const uri = studio !== 'all-studios' ? '?studio='+studio : '';
+    const uri = studio !== 'all-studios' ? '/'+studio : '';
     return `/events${uri}`;
   },
   getEventsForStudio() {

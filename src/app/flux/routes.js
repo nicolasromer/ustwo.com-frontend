@@ -82,8 +82,8 @@ const routes = {
     }]
   },
   eventHub: {
-    id: 'event-hub',
-    patterns: ['/events?studio=:lid', '/events'],
+    id: 'events',
+    patterns: ['/events', '/events/:lid'],
     data: lid => [{
       url: 'ustwo/v1/pages/events',
       type: 'page',
@@ -92,7 +92,7 @@ const routes = {
   },
   event: {
     id: 'event-hub/event',
-    patterns: ['/events/:eid'],
+    patterns: ['/event/:eid'],
     data: eid => [{
       url: 'ustwo/v1/pages/events',
       type: 'page',
